@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    /* width: 100vw; */
+    height: 100vh;
+    /* remove scrolling of imag in x-axix */
+    overflow-x: hidden;
+    overflow-y:auto;
+    perspective: 10px;
+}
+
+.adventure{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.img1{
+    transform: translateZ(-20px) scale(3);
+}
+.img2{
+    transform: translateZ(-10px) scale(2);
+}
+
+.img1 , .img2{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    object-fit: covers;
+
+}
+
+h1{
+    position: absolute;
+    top: 1rem;
+    font-size: 10vmax;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+.heading{
+    top: 12rem;
+    font-size: 2vmax;
+    color: black;
+}
+
+section{
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem 0;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 90vh;
+    background-size: cover;
+    padding: 2vh 2vw;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg1{
+    background-image: url(./img/p1.png);
+}
+.bg2{
+    background-image: url(./img/p2.png);
+}
+.bg3{
+    background-image: url(./img/p3.png);
+}
+ .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    padding: 20px 0 40px 0 ;
+    backdrop-filter: blur(50px);
+ }
+  h3{
+    font-weight: 900;
+    /* color: black; */
+    color: #fff;
+    font-size: 35px;
+  }
+  .code-btns{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .c-btn{
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: 1px solid  rgb(97, 96, 96);
+    background-color: #fff;
+    font-weight: 700;
+  }
+  .c-btn>a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(97, 96, 96);
+  }
+  .social-icons{
+    width: 20vmax;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding: 10px; */
+    margin-top: 20px;
+  }
+  .social-icons>a>img:hover{
+    transform: scale(1.4);
+  }
+  /* .right{
+    width: 40%;
+    height: 50vh;
+  } */
+  footer{
+    width: 100%;
+    padding: 20px;
+    /* height: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .copy{
+    font-size: 20px;
+    color: rebeccapurple;
+  }
+@media (max-width:600px) {
+
+    .heading{
+        display: none;
+    }
+    h3{
+        font-size: 28px;
+    }
+    .adventure{
+        width: 100%;
+        height: 40vh;
+        transform-style: preserve-3d;
+    }
+    .adventure>.img1{
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        /* border: 2px solid black; */
+        transform: translateZ(-10px) scale(9) ;
+    }
+    .adventure>.img2{
+        width: 100%;
+        height: 100%;
+        transform:translateZ(-9px) scale(2) translateY(-100px);
+    }
+    .adventure>h1{
+        font-size: 40px;
+    }
+    .secheading{
+        font-size: 10vw;
+        padding: 0 ;
+        text-align: center;
+        /* border:  1px solid white; */
+    }
+    .text{
+        /* border:  1px solid white; */
+        padding: 0 0 ;
+        text-align: center;
+        margin: 1.2rem 0 ;
+    }
+    .hero-description{
+        width: 100%;
+        height: 60vh;
+    }
+    .bg1, .bg2, .bg3{
+        background-position: center;
+    }
+}
+
+@media ( max-width:900px) and (min-width:600px) {
+    .adventure>.img2{
+        transform:  translateZ(-10px) scale(3) translateY(-150px);
+    }
+    .bg1, .bg2, .bg3{
+        background-position: center;
+    }
+    
+}
